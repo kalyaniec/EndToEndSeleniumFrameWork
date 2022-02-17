@@ -22,7 +22,7 @@ public WebDriver initializeDriver() throws IOException
 {
 	
  prop= new Properties();
-FileInputStream fis=new FileInputStream("C:\\Users\\KASETHY\\Desktop\\INT\\original\\E2EProject\\src\\main\\java\\resources\\data.properties");
+FileInputStream fis=new FileInputStream("C:\\Users\\XXX\\E2EProject\\src\\main\\java\\resources\\data.properties");
 
 prop.load(fis);
 String browserName=prop.getProperty("browser");
@@ -30,7 +30,7 @@ System.out.println(browserName);
 
 if(browserName.equals("chrome"))
 {
-	 System.setProperty("webdriver.chrome.driver", "C://chromedriver.exe");
+	 System.setProperty("webdriver.chrome.driver", "X://chromedriver.exe");
 	driver= new ChromeDriver();
 		//execute in chrome driver
 	
@@ -54,7 +54,7 @@ return driver;
 public void getScreenshot(String result) throws IOException
 {
 	File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-	FileUtils.copyFile(src, new File("C://test//"+result+"screenshot.png"));
+	FileUtils.copyFile(src, new File("X://test//"+result+"screenshot.png"));
 	
 }
 
